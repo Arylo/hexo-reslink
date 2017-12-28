@@ -1,0 +1,7 @@
+--require should
+--require source-map-support/register
+--recursive
+--slow 5000
+--timeout 10000
+--exit
+./dist/test/**/*.spec.js
