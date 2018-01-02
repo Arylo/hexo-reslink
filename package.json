@@ -55,5 +55,7 @@
       "lcov"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "markdown-to-ast": "^6.0.2"
+  }
 }

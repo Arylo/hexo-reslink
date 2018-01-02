@@ -1,4 +1,5 @@
-export const REG = /github:([a-z\d_-]+(\/[a-z\d._-]+)?)/;
+export const REG =
+    /github:([a-zA-Z\d][a-zA-Z\d_-]*[a-zA-Z\d](\/[a-zA-Z\d._-]+[a-zA-Z\d])?)/;
 
 export const process = (text: string) => {
     if (!REG.test(text)) {
