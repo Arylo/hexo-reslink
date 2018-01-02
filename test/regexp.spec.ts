@@ -2,6 +2,15 @@ import { process } from './../lib/npm';
 
 describe('Npm Process', () => {
 
+    const linkRegexp = (pkgName: string) => {
+        const matchTextStart =
+            `\\[${pkgName}\\]\\(https://www.npmjs.com/package/${pkgName}`;
+        const matchTextEnd = "\\)";
+        return new RegExp(
+            `${matchTextStart}(\\s+.*)?${matchTextEnd}`
+        );
+    };
+
     it("Top Downloads", () => {
         // Data from http://npmjs.ir
         const tops = [
@@ -36,12 +45,38 @@ describe('Npm Process', () => {
             "is-fullwidth-code-point", "ajv", "mime-db", "iconv-lite", "rimraf",
             "boom", "lru-cache", "uglify-js", "cryptiles", "aws-sign2"
         ];
-        const testData = [...tops].map((item) => `npm:${tops}`);
+        const testDatas = [...tops].map((item) => `npm:${item}`);
         for (let i = 0; i < tops.length; i++) {
-            const item = testData[i];
-            process(item).should.be.not.equal(item);
-        }
+            const item = testDatas[i];
+            const content = process(item);
+            const reg = new RegExp(`^${linkRegexp(tops[i]).source}$`);
 
+            content.should.be.not.equal(item);
+            content.should.be.match(reg);
+        }
+    });
+
+    it("left space", () => {
+        const str = "  npm:hexo-cli";
+        const content = process(str);
+        const reg = new RegExp(`^  ${linkRegexp("hexo-cli").source}$`);
+
+        content.should.be.match(reg);
+    });
+
+    it("right space", () => {
+        const str = "npm:fullpage.js  ";
+        const content = process(str);
+        const reg = new RegExp(`^${linkRegexp("fullpage.js").source}  $`);
+
+        content.should.be.match(reg);
+    });
+
+    it("both spaces", () => {
+        const str = "  npm:@nest/testing   ";
+        const content = process(str);
+
+        content.should.be.equal(`  ${process("npm:@nest/testing")}   `);
     });
 
 });

@@ -811,8 +811,8 @@ mkdirp@0.5.1, mkdirp@^0.5.0, mkdirp@^0.5.1:
     minimist "0.0.8"
 
 mocha@^4.0.1:
-  version "4.0.1"
-  resolved "http://registry.npm.taobao.org/mocha/download/mocha-4.0.1.tgz#0aee5a95cf69a4618820f5e51fa31717117daf1b"
+  version "4.1.0"
+  resolved "http://registry.npm.taobao.org/mocha/download/mocha-4.1.0.tgz#7d86cfbcf35cb829e2754c32e17355ec05338794"
   dependencies:
     browser-stdout "1.3.0"
     commander "2.11.0"
@@ -1275,7 +1275,7 @@ trim-right@^1.0.1:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/trim-right/download/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
 
-tslib@^1.7.1, tslib@^1.8.0:
+tslib@^1.7.1, tslib@^1.8.1:
   version "1.8.1"
   resolved "http://registry.npm.taobao.org/tslib/download/tslib-1.8.1.tgz#6946af2d1d651a7b1863b531d6e5afa41aa44eac"
 
@@ -1296,10 +1296,10 @@ tslint@^5.8.0:
     tsutils "^2.12.1"
 
 tsutils@^2.12.1:
-  version "2.14.0"
-  resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-2.14.0.tgz#bc5291622aa2448c1baffc544bcc14ecfa528fb7"
+  version "2.15.0"
+  resolved "http://registry.npm.taobao.org/tsutils/download/tsutils-2.15.0.tgz#90831e5908cca10b28cdaf83a56dcf8156aed7c6"
   dependencies:
-    tslib "^1.8.0"
+    tslib "^1.8.1"
 
 typescript@^2.6.2:
   version "2.6.2"

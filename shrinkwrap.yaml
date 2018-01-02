@@ -1,42 +1,94 @@
-dependencies:
-  '@types/faker@^4.1.2': 4.1.2
-  '@types/mocha@^2.2.45': 2.2.45
-  '@types/should@^11.2.0': 11.2.0
-  faker@^4.1.0: 4.1.0
-  mocha@^4.0.1: 4.0.1
-  nyc@^11.4.1: 11.4.1
-  should@^12.0.0: 12.0.0
-  source-map-support@^0.5.0: 0.5.0
-  tslint@^5.8.0: 5.8.0
-  typescript@^2.6.2: 2.6.2
+devDependencies:
+  '@types/faker': 4.1.2
+  '@types/mocha': 2.2.45
+  '@types/should': 11.2.0
+  faker: 4.1.0
+  mocha: 4.1.0
+  nyc: 11.4.1
+  should: 12.0.0
+  source-map-support: 0.5.0
+  tslint: 5.8.0
+  typescript: 2.6.2
 packages:
-  /@types/faker/4.1.2: f8ab50c9f9af68c160dd71b63f83e24b712d0df5
+  /@types/faker/4.1.2:
+    dev: true
+    resolution:
+      integrity: sha1-+KtQyfmvaMFg3XG2P4PiS3EtDfU=
+      tarball: /@types/faker/download/@types/faker-4.1.2.tgz
   /@types/mocha/2.2.45:
     dependencies:
       '@types/node': 8.5.2
-    resolution: 816572b6e45164526a36d4faa123e8267d6d5d0a
-  /@types/node/8.5.2: 83b8103fa9a2c2e83d78f701a9aa7c9539739aa5
-  /@types/should/11.2.0: e74aadfc13a1a0fc4b43786093eda395b6b32263
-  /ansi-regex/2.1.1: c3b33ab5ee360d86e0e628f0468ae7ef27d654df
-  /ansi-styles/2.2.1: b432dd3358b634cf75e1e4664368240533c1ddbe
+    dev: true
+    resolution:
+      integrity: sha1-gWVytuRRZFJqNtT6oSPoJn1tXQo=
+      tarball: /@types/mocha/download/@types/mocha-2.2.45.tgz
+  /@types/node/8.5.2:
+    dev: true
+    resolution:
+      integrity: sha1-g7gQP6miwug9ePcBqap8lTlzmqU=
+      tarball: /@types/node/download/@types/node-8.5.2.tgz
+  /@types/should/11.2.0:
+    dev: true
+    resolution:
+      integrity: sha1-50qt/BOhoPxLQ3hgk+2jlbazImM=
+      tarball: /@types/should/download/@types/should-11.2.0.tgz
+  /ansi-regex/2.1.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
+      tarball: /ansi-regex/download/ansi-regex-2.1.1.tgz
+  /ansi-styles/2.2.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4=
+      tarball: /ansi-styles/download/ansi-styles-2.2.1.tgz
   /ansi-styles/3.2.0:
     dependencies:
       color-convert: 1.9.1
-    resolution: c159b8d5be0f9e5a6f346dab94f16ce022161b88
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-wVm41b4PnlpvNG2rlPFs4CIWG4g=
+      tarball: /ansi-styles/download/ansi-styles-3.2.0.tgz
   /babel-code-frame/6.26.0:
     dependencies:
       chalk: 1.1.3
       esutils: 2.0.2
       js-tokens: 3.0.2
-    resolution: 63fd43f7dc1e3bb7ce35947db8fe369a3f58c74b
-  /balanced-match/1.0.0: 89b4d199ab2bee49de164ea02b89ce462d71b767
+    dev: true
+    resolution:
+      integrity: sha1-Y/1D99weO7fONZR9uP42mj9Yx0s=
+      tarball: /babel-code-frame/download/babel-code-frame-6.26.0.tgz
+  /balanced-match/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+      tarball: /balanced-match/download/balanced-match-1.0.0.tgz
   /brace-expansion/1.1.8:
     dependencies:
       balanced-match: 1.0.0
       concat-map: 0.0.1
-    resolution: c07b211c7c952ec1f8efd51a77ef0d1d3990a292
-  /browser-stdout/1.3.0: f351d32969d32fa5d7a5567154263d928ae3bd1f
-  /builtin-modules/1.1.1: 270f076c5a72c02f5b65a47df94c5fe3a278892f
+    dev: true
+    resolution:
+      integrity: sha1-wHshHHyVLsH479Uad+8NHTmQopI=
+      tarball: /brace-expansion/download/brace-expansion-1.1.8.tgz
+  /browser-stdout/1.3.0:
+    dev: true
+    resolution:
+      integrity: sha1-81HTKWnTL6XXpVZxVCY9korjvR8=
+      tarball: /browser-stdout/download/browser-stdout-1.3.0.tgz
+  /builtin-modules/1.1.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
+      tarball: /builtin-modules/download/builtin-modules-1.1.1.tgz
   /chalk/1.1.3:
     dependencies:
       ansi-styles: 2.2.1
@@ -44,31 +96,95 @@ packages:
       has-ansi: 2.0.0
       strip-ansi: 3.0.1
       supports-color: 2.0.0
-    resolution: a8115c55e4a702fe4d150abd3872822a7e09fc98
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=
+      tarball: /chalk/download/chalk-1.1.3.tgz
   /chalk/2.3.0:
     dependencies:
       ansi-styles: 3.2.0
       escape-string-regexp: 1.0.5
       supports-color: 4.5.0
-    resolution: b5ea48efc9c1793dccc9b4767c93914d3f2d52ba
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-tepI78nBeT3MybR2fJORTT8tUro=
+      tarball: /chalk/download/chalk-2.3.0.tgz
   /color-convert/1.9.1:
     dependencies:
       color-name: 1.1.3
-    resolution: c1261107aeb2f294ebffec9ed9ecad529a6097ed
-  /color-name/1.1.3: a7d0558bd89c42f795dd42328f740831ca53bc25
-  /commander/2.11.0: 157152fd1e7a6c8d98a5b715cf376df928004563
-  /commander/2.12.2: 0f5946c427ed9ec0d91a46bb9def53e54650e555
-  /concat-map/0.0.1: d8a96bd77fd68df7793a73036a3ba0d5405d477b
+    dev: true
+    resolution:
+      integrity: sha1-wSYRB66y8pTr/+ye2eytUppgl+0=
+      tarball: /color-convert/download/color-convert-1.9.1.tgz
+  /color-name/1.1.3:
+    dev: true
+    resolution:
+      integrity: sha1-p9BVi9icQveV3UIyj3QIMcpTvCU=
+      tarball: /color-name/download/color-name-1.1.3.tgz
+  /commander/2.11.0:
+    dev: true
+    resolution:
+      integrity: sha1-FXFS/R56bI2YpbcVzzdt+SgARWM=
+      tarball: /commander/download/commander-2.11.0.tgz
+  /commander/2.12.2:
+    dev: true
+    resolution:
+      integrity: sha1-D1lGxCftnsDZGka7ne9T5UZQ5VU=
+      tarball: /commander/download/commander-2.12.2.tgz
+  /concat-map/0.0.1:
+    dev: true
+    resolution:
+      integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+      tarball: /concat-map/download/concat-map-0.0.1.tgz
   /debug/3.1.0:
     dependencies:
       ms: 2.0.0
-    resolution: 5bb5a0672628b64149566ba16819e61518c67261
-  /diff/3.3.1: aa8567a6eed03c531fc89d3f711cd0e5259dec75
-  /diff/3.4.0: b1d85507daf3964828de54b37d0d73ba67dda56c
-  /escape-string-regexp/1.0.5: 1b61c0562190a8dff6ae3bb2cf0200ca130b86d4
-  /esutils/2.0.2: 0abf4f1caa5bcb1f7a9d8acc6dea4faaa04bac9b
-  /faker/4.1.0: 1e45bbbecc6774b3c195fad2835109c6d748cc3f
-  /fs.realpath/1.0.0: 1504ad2523158caa40db4a2787cb01411994ea4f
+    dev: true
+    resolution:
+      integrity: sha1-W7WgZyYotkFJVmuhaBnmFRjGcmE=
+      tarball: /debug/download/debug-3.1.0.tgz
+  /diff/3.3.1:
+    dev: true
+    engines:
+      node: '>=0.3.1'
+    resolution:
+      integrity: sha1-qoVnpu7QPFMfyJ0/cRzQ5SWd7HU=
+      tarball: /diff/download/diff-3.3.1.tgz
+  /diff/3.4.0:
+    dev: true
+    engines:
+      node: '>=0.3.1'
+    resolution:
+      integrity: sha1-sdhVB9rzlkgo3lSzfQ1zumfdpWw=
+      tarball: /diff/download/diff-3.4.0.tgz
+  /escape-string-regexp/1.0.5:
+    dev: true
+    engines:
+      node: '>=0.8.0'
+    resolution:
+      integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+      tarball: /escape-string-regexp/download/escape-string-regexp-1.0.5.tgz
+  /esutils/2.0.2:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-Cr9PHKpbyx96nYrMbepPqqBLrJs=
+      tarball: /esutils/download/esutils-2.0.2.tgz
+  /faker/4.1.0:
+    dev: true
+    resolution:
+      integrity: sha1-HkW7vsxndLPBlfrSg1EJxtdIzD8=
+      tarball: /faker/download/faker-4.1.0.tgz
+  /fs.realpath/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
+      tarball: /fs.realpath/download/fs.realpath-1.0.0.tgz
   /glob/7.1.2:
     dependencies:
       fs.realpath: 1.0.0
@@ -77,31 +193,76 @@ packages:
       minimatch: 3.0.4
       once: 1.4.0
       path-is-absolute: 1.0.1
-    resolution: c19c9df9a028702d678612384a6552404c636d15
-  /growl/1.10.3: 1926ba90cf3edfe2adb4927f5880bc22c66c790f
+    dev: true
+    resolution:
+      integrity: sha1-wZyd+aAocC1nhhI4SmVSQExjbRU=
+      tarball: /glob/download/glob-7.1.2.tgz
+  /growl/1.10.3:
+    dev: true
+    engines:
+      node: '>=4.x'
+    resolution:
+      integrity: sha1-GSa6kM8+3+KttJJ/WIC8IsZseQ8=
+      tarball: /growl/download/growl-1.10.3.tgz
   /has-ansi/2.0.0:
     dependencies:
       ansi-regex: 2.1.1
-    resolution: 34f5049ce1ecdf2b0649af3ef24e45ed35416d91
-  /has-flag/2.0.0: e8207af1cc7b30d446cc70b734b5e8be18f88d51
-  /he/1.1.1: 93410fd21b009735151f8868c2f271f3427e23fd
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=
+      tarball: /has-ansi/download/has-ansi-2.0.0.tgz
+  /has-flag/2.0.0:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-6CB68cx7MNRGzHC3NLXovhj4jVE=
+      tarball: /has-flag/download/has-flag-2.0.0.tgz
+  /he/1.1.1:
+    dev: true
+    resolution:
+      integrity: sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
+      tarball: /he/download/he-1.1.1.tgz
   /inflight/1.0.6:
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
-    resolution: 49bd6331d7d02d0c09bc910a1075ba8165b56df9
-  /inherits/2.0.3: 633c2c83e3da42a502f52466022480f4208261de
-  /js-tokens/3.0.2: 9866df395102130e38f7f996bceb65443209c25b
+    dev: true
+    resolution:
+      integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
+      tarball: /inflight/download/inflight-1.0.6.tgz
+  /inherits/2.0.3:
+    dev: true
+    resolution:
+      integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=
+      tarball: /inherits/download/inherits-2.0.3.tgz
+  /js-tokens/3.0.2:
+    dev: true
+    resolution:
+      integrity: sha1-mGbfOVECEw449/mWvOtlRDIJwls=
+      tarball: /js-tokens/download/js-tokens-3.0.2.tgz
   /minimatch/3.0.4:
     dependencies:
       brace-expansion: 1.1.8
-    resolution: 5166e286457f03306064be5497e8dbb0c3d32083
-  /minimist/0.0.8: 857fcabfc3397d2625b8228262e86aa7a011b05d
+    dev: true
+    resolution:
+      integrity: sha1-UWbihkV/AzBgZL5Ul+jbsMPTIIM=
+      tarball: /minimatch/download/minimatch-3.0.4.tgz
+  /minimist/0.0.8:
+    dev: true
+    resolution:
+      integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
+      tarball: /minimist/download/minimist-0.0.8.tgz
   /mkdirp/0.5.1:
     dependencies:
       minimist: 0.0.8
-    resolution: 30057438eac6cf7f8c4767f38648d6697d75c903
-  /mocha/4.0.1:
+    dev: true
+    resolution:
+      integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+      tarball: /mkdirp/download/mkdirp-0.5.1.tgz
+  /mocha/4.1.0:
     dependencies:
       browser-stdout: 1.3.0
       commander: 2.11.0
@@ -113,36 +274,114 @@ packages:
       he: 1.1.1
       mkdirp: 0.5.1
       supports-color: 4.4.0
-    resolution: 0aee5a95cf69a4618820f5e51fa31717117daf1b
-  /ms/2.0.0: 5608aeadfc00be6c2901df5f9861788de0d597c8
-  /nyc/11.4.1: 13fdf7e7ef22d027c61d174758f6978a68f4f5e5
+    dev: true
+    engines:
+      node: '>= 4.0.0'
+    resolution:
+      integrity: sha1-fYbPvPNcuCnidUwy4XNV7AUzh5Q=
+      tarball: /mocha/download/mocha-4.1.0.tgz
+  /ms/2.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+      tarball: /ms/download/ms-2.0.0.tgz
+  /nyc/11.4.1:
+    bundledDependencies:
+      - archy
+      - arrify
+      - caching-transform
+      - convert-source-map
+      - debug-log
+      - default-require-extensions
+      - find-cache-dir
+      - find-up
+      - foreground-child
+      - glob
+      - istanbul-lib-coverage
+      - istanbul-lib-hook
+      - istanbul-lib-instrument
+      - istanbul-lib-report
+      - istanbul-lib-source-maps
+      - istanbul-reports
+      - md5-hex
+      - merge-source-map
+      - micromatch
+      - mkdirp
+      - resolve-from
+      - rimraf
+      - signal-exit
+      - spawn-wrap
+      - test-exclude
+      - yargs
+      - yargs-parser
+    dev: true
+    resolution:
+      integrity: sha1-E/335+8i0CfGHRdHWPaXimj09eU=
+      tarball: /nyc/download/nyc-11.4.1.tgz
   /once/1.4.0:
     dependencies:
       wrappy: 1.0.2
-    resolution: 583b1aa775961d4b113ac17d9c50baef9dd76bd1
-  /path-is-absolute/1.0.1: 174b9268735534ffbc7ace6bf53a5a9e1b5c5f5f
-  /path-parse/1.0.5: 3c1adf871ea9cd6c9431b6ea2bd74a0ff055c4c1
+    dev: true
+    resolution:
+      integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+      tarball: /once/download/once-1.4.0.tgz
+  /path-is-absolute/1.0.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
+      tarball: /path-is-absolute/download/path-is-absolute-1.0.1.tgz
+  /path-parse/1.0.5:
+    dev: true
+    resolution:
+      integrity: sha1-PBrfhx6pzWyUMbbqK9dKD/BVxME=
+      tarball: /path-parse/download/path-parse-1.0.5.tgz
   /resolve/1.5.0:
     dependencies:
       path-parse: 1.0.5
-    resolution: 1f09acce796c9a762579f31b2c1cc4c3cddf9f36
-  /semver/5.4.1: e059c09d8571f0540823733433505d3a2f00b18e
+    dev: true
+    resolution:
+      integrity: sha1-HwmsznlsmnYlefMbLBzEw83fnzY=
+      tarball: /resolve/download/resolve-1.5.0.tgz
+  /semver/5.4.1:
+    dev: true
+    resolution:
+      integrity: sha1-4FnAnYVx8FQII3M0M1BdOi8AsY4=
+      tarball: /semver/download/semver-5.4.1.tgz
   /should-equal/2.0.0:
     dependencies:
       should-type: 1.4.0
-    resolution: 6072cf83047360867e68e98b09d71143d04ee0c3
+    dev: true
+    resolution:
+      integrity: sha1-YHLPgwRzYIZ+aOmLCdcRQ9BO4MM=
+      tarball: /should-equal/download/should-equal-2.0.0.tgz
   /should-format/3.0.3:
     dependencies:
       should-type: 1.4.0
       should-type-adaptors: 1.1.0
-    resolution: 9bfc8f74fa39205c53d38c34d717303e277124f1
+    dev: true
+    resolution:
+      integrity: sha1-m/yPdPo5IFxT04w01xcwPidxJPE=
+      tarball: /should-format/download/should-format-3.0.3.tgz
   /should-type-adaptors/1.1.0:
     dependencies:
       should-type: 1.4.0
       should-util: 1.0.0
-    resolution: 401e7f33b5533033944d5cd8bf2b65027792e27a
-  /should-type/1.4.0: 0756d8ce846dfd09843a6947719dfa0d4cff5cf3
-  /should-util/1.0.0: c98cda374aa6b190df8ba87c9889c2b4db620063
+    dev: true
+    resolution:
+      integrity: sha1-QB5/M7VTMDOUTVzYvytlAneS4no=
+      tarball: /should-type-adaptors/download/should-type-adaptors-1.1.0.tgz
+  /should-type/1.4.0:
+    dev: true
+    resolution:
+      integrity: sha1-B1bYzoRt/QmEOmlHcZ36DUz/XPM=
+      tarball: /should-type/download/should-type-1.4.0.tgz
+  /should-util/1.0.0:
+    dev: true
+    resolution:
+      integrity: sha1-yYzaN0qmsZDfi6h8mInCtNtiAGM=
+      tarball: /should-util/download/should-util-1.0.0.tgz
   /should/12.0.0:
     dependencies:
       should-equal: 2.0.0
@@ -150,26 +389,63 @@ packages:
       should-type: 1.4.0
       should-type-adaptors: 1.1.0
       should-util: 1.0.0
-    resolution: 846667cd241691a6509fff0820f44d39143ddcf7
+    dev: true
+    resolution:
+      integrity: sha1-hGZnzSQWkaZQn/8IIPRNORQ93Pc=
+      tarball: /should/download/should-12.0.0.tgz
   /source-map-support/0.5.0:
     dependencies:
       source-map: 0.6.1
-    resolution: 2018a7ad2bdf8faf2691e5fddab26bed5a2bacab
-  /source-map/0.6.1: 74722af32e9614e9c287a8d0bbde48b5e2f1a263
+    dev: true
+    resolution:
+      integrity: sha1-IBinrSvfj68mkeX92rJr7VorrKs=
+      tarball: /source-map-support/download/source-map-support-0.5.0.tgz
+  /source-map/0.6.1:
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-dHIq8y6WFOnCh6jQu95IteLxomM=
+      tarball: /source-map/download/source-map-0.6.1.tgz
   /strip-ansi/3.0.1:
     dependencies:
       ansi-regex: 2.1.1
-    resolution: 6a385fb8853d952d5ff05d0e8aaf94278dc63dcf
-  /supports-color/2.0.0: 535d045ce6b6363fa40117084629995e9df324c7
+    dev: true
+    engines:
+      node: '>=0.10.0'
+    resolution:
+      integrity: sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
+      tarball: /strip-ansi/download/strip-ansi-3.0.1.tgz
+  /supports-color/2.0.0:
+    dev: true
+    engines:
+      node: '>=0.8.0'
+    resolution:
+      integrity: sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
+      tarball: /supports-color/download/supports-color-2.0.0.tgz
   /supports-color/4.4.0:
     dependencies:
       has-flag: 2.0.0
-    resolution: 883f7ddabc165142b2a61427f3352ded195d1a3e
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-iD992rwWUUKyphQn8zUt7RldGj4=
+      tarball: /supports-color/download/supports-color-4.4.0.tgz
   /supports-color/4.5.0:
     dependencies:
       has-flag: 2.0.0
-    resolution: be7a0de484dec5c5cddf8b3d59125044912f635b
-  /tslib/1.8.1: 6946af2d1d651a7b1863b531d6e5afa41aa44eac
+    dev: true
+    engines:
+      node: '>=4'
+    resolution:
+      integrity: sha1-vnoN5ITexcXN34s9WRJQRJEvY1s=
+      tarball: /supports-color/download/supports-color-4.5.0.tgz
+  /tslib/1.8.1:
+    dev: true
+    resolution:
+      integrity: sha1-aUavLR1lGnsYY7Ux1uWvpBqkTqw=
+      tarball: /tslib/download/tslib-1.8.1.tgz
   /tslint/5.8.0:
     dependencies:
       babel-code-frame: 6.26.0
@@ -182,13 +458,47 @@ packages:
       resolve: 1.5.0
       semver: 5.4.1
       tslib: 1.8.1
-      tsutils: 2.14.0
-    resolution: 1f49ad5b2e77c76c3af4ddcae552ae4e3612eb13
-  /tsutils/2.14.0:
+      tsutils: 2.15.0
+    dev: true
+    engines:
+      node: '>=4.1.2'
+    peerDependencies:
+      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >=2.4.0-dev || >=2.5.0-dev || >=2.6.0-dev || >=2.7.0-dev'
+    resolution:
+      integrity: sha1-H0mtWy53x2w69N3K5VKuTjYS6xM=
+      tarball: /tslint/download/tslint-5.8.0.tgz
+  /tsutils/2.15.0:
     dependencies:
       tslib: 1.8.1
-    resolution: bc5291622aa2448c1baffc544bcc14ecfa528fb7
-  /typescript/2.6.2: 3c5b6fd7f6de0914269027f03c0946758f7673a4
-  /wrappy/1.0.2: b5243d8f3ec1aa35f1364605bc0d1036e30ab69f
+    dev: true
+    peerDependencies:
+      typescript: '>=2.1.0 || >=2.1.0-dev || >=2.2.0-dev || >=2.3.0-dev || >= 2.4.0-dev || >= 2.5.0-dev || >= 2.6.0-dev || >= 2.7.0-dev || >= 2.8.0-dev'
+    resolution:
+      integrity: sha1-kIMeWQjMoQsoza+DpW3PgVau18Y=
+      tarball: /tsutils/download/tsutils-2.15.0.tgz
+  /typescript/2.6.2:
+    dev: true
+    engines:
+      node: '>=4.2.0'
+    resolution:
+      integrity: sha1-PFtv1/beCRQmkCfwPAlGdY92c6Q=
+      tarball: /typescript/download/typescript-2.6.2.tgz
+  /wrappy/1.0.2:
+    dev: true
+    resolution:
+      integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+      tarball: /wrappy/download/wrappy-1.0.2.tgz
 registry: 'http://registry.npm.taobao.org/'
-version: 2
+shrinkwrapMinorVersion: 4
+shrinkwrapVersion: 3
+specifiers:
+  '@types/faker': ^4.1.2
+  '@types/mocha': ^2.2.45
+  '@types/should': ^11.2.0
+  faker: ^4.1.0
+  mocha: ^4.0.1
+  nyc: ^11.4.1
+  should: ^12.0.0
+  source-map-support: ^0.5.0
+  tslint: ^5.8.0
+  typescript: ^2.6.2

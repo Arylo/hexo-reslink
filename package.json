@@ -7,18 +7,28 @@
     "clean": "rm -rf dist",
     "tsc": "tsc",
     "build": "npm run tsc",
+    "prepublish": "npm run test",
     "pretest": "npm run clean&&npm run build",
-    "test": "mocha",
-    "prepublish": "npm run test"
+    "test-spec": "mocha",
+    "test-cov": "nyc npm run test-spec && nyc report",
+    "test": "npm run test-cov",
+    "report-coverage": "cat ./coverage/lcov.info | coveralls"
   },
   "files": [
-    "dist", "README", "LICENSE"
+    "dist",
+    "lib",
+    "README.md",
+    "LICENSE"
   ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Arylo/hexo-reslink.git"
   },
-  "keywords": [],
+  "keywords": [
+    "arylo",
+    "hexo",
+    "hexo-filter"
+  ],
   "author": "AryloYeung <arylo.open@gmail.com>",
   "license": "MIT",
   "bugs": {
@@ -36,5 +46,14 @@
     "source-map-support": "^0.5.0",
     "tslint": "^5.8.0",
     "typescript": "^2.6.2"
-  }
+  },
+  "nyc": {
+    "report-dir": "./coverage",
+    "reporter": [
+      "clover",
+      "cobertura",
+      "lcov"
+    ]
+  },
+  "dependencies": {}
 }
