@@ -1,8 +1,8 @@
-const npm = require("./dist/lib/npm");
+const transform = require("./dist/lib/transform");
 
-hexo.extend.filter.register('before_post_render', function (data){
+hexo.extend.filter.register('before_post_render', function (data) {
 
-    data.content = npm.process(data.content);
+    data.content = transform(data.content);
 
     return data;
 });

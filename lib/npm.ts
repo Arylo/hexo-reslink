@@ -1,4 +1,5 @@
-export const REG = /npm:((?:@?[a-z\d_-]+\/)?[a-z\d._-]+)/;
+export const REG =
+    /npm:((?:@?[a-z\d][a-z\d_-]*[a-z\d]\/)?[a-z\d][a-z\d._-]*[a-z\d])/;
 
 export const process = (text: string) => {
     if (!REG.test(text)) {

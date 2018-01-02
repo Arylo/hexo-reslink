@@ -7,7 +7,6 @@
     "clean": "rm -rf dist",
     "tsc": "tsc",
     "build": "npm run tsc",
-    "prepublish": "npm run test",
     "pretest": "npm run clean&&npm run build",
     "test-spec": "mocha",
     "test-cov": "nyc npm run test-spec && nyc report",
@@ -18,7 +17,8 @@
     "dist",
     "lib",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "tsconfig.json"
   ],
   "repository": {
     "type": "git",
@@ -55,5 +55,7 @@
       "lcov"
     ]
   },
-  "dependencies": {}
+  "dependencies": {
+    "markdown-to-ast": "^6.0.2"
+  }
 }
