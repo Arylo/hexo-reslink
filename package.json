@@ -1,6 +1,6 @@
 {
   "name": "hexo-reslink",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Automatically create resource links",
   "main": "index.js",
   "scripts": {
