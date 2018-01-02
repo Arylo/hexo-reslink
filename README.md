@@ -18,18 +18,18 @@ npm install hexo-reslink -S
 
 ## Example
 
-Here is content of `a.md`
+Here is content of `example.md`
 
 ```markdown
-The npm:hexo is a very nice framework.
+The npm:hexo is a very nice framework. Its homepage is github:hexojs/hexo.
 ```
 
 After process of `hexo-reslink` and before `render`
 
-`a.md` will be transformed as:
+`example.md` will be transformed as:
 
 ```markdown
-The [hexo](https://www.npmjs.com/package/hexo) is a very nice framework.
+The [hexo](https://www.npmjs.com/package/hexo) is a very nice framework. Its homepage is [hexojs/hexo](https://github.com/hexojs/hexo).
 ```
 
 This is a resource's url which capturing during `before_post_render` event
