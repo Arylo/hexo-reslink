@@ -2,7 +2,6 @@ import npm = require("./npm");
 import github = require("./github");
 import { isArray } from "util";
 const parse = require("markdown-to-ast").parse;
-const toMd = require("ast-to-markdown");
 
 interface IBlock {
     type: string;
@@ -21,42 +20,52 @@ export = (content: string) => {
     const ast: IBlock = parse(content);
 
     const tranChildren = (block: IBlock) => {
-        let text = block.raw;
+
         if (block.children && isArray(block.children)) {
-            let lastLine = block.loc.start.line;
-            let newRaw = "";
-            for (let b of block.children) {
-                b = tranChildren(b);
+            for (let bi = 0; bi < block.children.length; bi++) {
+                const b = block.children[bi];
+                block.children[bi] = tranChildren(b);
             }
-            for (let b of block.children) {
-                const startLine = block.loc.start.line;
-                const endLine = block.loc.end.line;
-                if (startLine === lastLine) {
-                    newRaw += b.raw;
+            // Supply \n
+            for (let bi = 0; bi < block.children.length; bi++) {
+                if (bi === 0) {
                     continue;
                 }
-                for (let i = 0; i < (startLine - lastLine); i++) {
-                    newRaw += "\n";
+                const b = block.children[bi];
+                const pb = block.children[bi - 1];
+                const startLine = b.loc.start.line;
+                const endLine = pb.loc.end.line;
+                if ((endLine - startLine - 1) <= 0) {
+                    continue;
                 }
-                newRaw += b.raw;
-                lastLine = endLine;
+                for (let i = 0; i < (endLine - startLine); i++) {
+                    b.raw = "\\n" + b.raw;
+                }
             }
-            block.raw = newRaw;
+            // Replace String
+            for (let bi = block.children.length - 1; bi >= 0; bi--) {
+                const b = block.children[bi];
+                const text = block.raw;
+                const strs = [
+                    text.slice(0, b.range[0] - block.range[0]), // Start
+                    b.raw, // Mid
+                    text.slice(b.range[1] - block.range[0]) // End
+                ];
+                block.raw = strs.join("");
+            }
             return block;
         }
         if (block.type === "CodeBlock" || block.type === "Code") {
             return block;
         }
 
+        // Process
+        let text = block.raw;
         text = npm.process(text);
         text = github.process(text);
 
         block.raw = text;
-        if (block.value) {
-            block.value = text;
-        }
         return block;
     };
-
-    return toMd(tranChildren(ast)).replace(/(^\n|\n$)/g, "");
+    return tranChildren(ast).raw;
 };
