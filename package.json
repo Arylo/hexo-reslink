@@ -1,6 +1,6 @@
 {
   "name": "hexo-reslink",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Automatically create resource links",
   "main": "index.js",
   "scripts": {
@@ -56,6 +56,7 @@
     ]
   },
   "dependencies": {
+    "ast-to-markdown": "^0.2.0",
     "markdown-to-ast": "^6.0.2"
   }
 }

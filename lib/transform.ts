@@ -2,12 +2,14 @@ import npm = require("./npm");
 import github = require("./github");
 import { isArray } from "util";
 const parse = require("markdown-to-ast").parse;
+const toMd = require("ast-to-markdown");
 
 interface IBlock {
     type: string;
     raw: string;
-    children?: IBlock[];
-    range: [number, number];
+    value?: string;
+    children?: IBlock[ ];
+    range: [ number, number ];
     loc: {
         start: { line: number, column: number },
         end: { line: number, column: number }
@@ -17,26 +19,44 @@ interface IBlock {
 export = (content: string) => {
 
     const ast: IBlock = parse(content);
-    let newContent = "";
 
     const tranChildren = (block: IBlock) => {
         let text = block.raw;
         if (block.children && isArray(block.children)) {
+            let lastLine = block.loc.start.line;
+            let newRaw = "";
             for (let b of block.children) {
-                tranChildren(b);
+                b = tranChildren(b);
             }
-            return;
+            for (let b of block.children) {
+                const startLine = block.loc.start.line;
+                const endLine = block.loc.end.line;
+                if (startLine === lastLine) {
+                    newRaw += b.raw;
+                    continue;
+                }
+                for (let i = 0; i < (startLine - lastLine); i++) {
+                    newRaw += "\n";
+                }
+                newRaw += b.raw;
+                lastLine = endLine;
+            }
+            block.raw = newRaw;
+            return block;
         }
         if (block.type === "CodeBlock" || block.type === "Code") {
-            newContent += text;
-            return;
+            return block;
         }
+
         text = npm.process(text);
         text = github.process(text);
-        newContent += text;
+
+        block.raw = text;
+        if (block.value) {
+            block.value = text;
+        }
+        return block;
     };
 
-    tranChildren(ast);
-
-    return newContent;
+    return toMd(tranChildren(ast)).replace(/(^\n|\n$)/g, "");
 };
